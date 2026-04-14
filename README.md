@@ -6,11 +6,6 @@ An event-driven data pipeline that ingests, filters, and stores booking records 
 
 ![Pipeline Architecture](architecture.png)
 
-## Pipeline flow
-Producer Lambda → SQS Queue → EventBridge Pipe (filter) → Consumer Lambda → S3
-↓ (on failure)
-Dead Letter Queue
-
 ## How it works
 
 1. **Producer Lambda** generates booking records and publishes them to an SQS queue
